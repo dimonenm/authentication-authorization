@@ -22,7 +22,7 @@ export class AuthController {
     return req.user
   }
 
-  @Roles(Role.Admin)
+  @Roles(Role.User)
   @UseGuards(RolesGuard)
   @UseGuards(AuthGuard)
   @Get('get-data')
